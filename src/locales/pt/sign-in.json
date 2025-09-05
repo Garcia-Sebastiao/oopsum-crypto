@@ -1,0 +1,12 @@
+{
+  "sign-in": {
+    "title": "Entrar na sua conta",
+    "email": "Endereço de e-mail",
+    "password": "Senha",
+    "remember-me": "Lembrar-me",
+    "forgot-password": "Esqueceu sua senha?",
+    "sign-in-button": "Entrar",
+    "no-account": "Não tem uma conta?",
+    "sign-up": "Inscreva-se"
+  }
+}

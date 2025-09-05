@@ -1,0 +1,7 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "updated": "Updated on {{date}}",
+    "search": "Search your coins..."
+  }
+}

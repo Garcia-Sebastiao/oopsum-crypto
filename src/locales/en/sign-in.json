@@ -1,0 +1,28 @@
+{
+  "sign-in": {
+    "title": "Sign In to Your Account",
+    "label": "Enter your credentials to access your account",
+
+    "google": "Sign in with Google",
+    "github": "Sign in with GitHub",
+    "or": "or",
+
+    
+    "form": {
+      "terms": "I agree to the Terms & Privacy",
+      "email": "Email Address",
+      "email-placeholder": "Enter your email",
+      "password-placeholder": "Enter your password",
+      "password": "Password",
+      "remember-me": "Remember Me",
+      "forgot-password": "Forgot Password?",
+      "sign-in-button": "Sign In",
+      "no-account": "Don't have an account? <span class='text-green-primary font-semibold'>Sign Up</span>"
+    },
+
+    "sidebar": {
+      "span": "Simplify your crypto journey with",
+      "highlight": "Oopsum"
+    }
+  }
+}
