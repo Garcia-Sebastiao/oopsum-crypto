@@ -11,8 +11,8 @@ export function Sidebar() {
       </div>
 
       <nav className="w-full flex flex-col gap-4 mt-[4.25rem]">
-        {sidebarItems?.map((item) => (
-          <SidebarItem item={item} />
+        {sidebarItems?.map((item, index) => (
+          <SidebarItem key={index} item={item} />
         ))}
       </nav>
     </aside>

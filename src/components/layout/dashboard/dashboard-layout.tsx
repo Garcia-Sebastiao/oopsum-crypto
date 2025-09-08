@@ -7,10 +7,10 @@ export function DashboardLayout() {
     <div className="w-full flex h-screen">
       <Sidebar />
 
-      <main className="flex-1 h-full px-[30px] py-[20px]">
+      <main className="flex-1 flex relatve flex-col h-full overflow-y-auto">
         <Header />
 
-        <div className="w-full ">
+        <div className="w-full px-[30px] mt-[1rem] pb-12 flex-1">
           <Outlet />
         </div>
       </main>

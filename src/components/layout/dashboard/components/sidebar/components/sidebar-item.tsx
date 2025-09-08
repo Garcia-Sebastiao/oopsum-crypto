@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
 
 type SidebarItemProps = {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -8,11 +9,20 @@ type SidebarItemProps = {
 };
 
 export function SidebarItem({ item }: { item: SidebarItemProps }) {
+  const navigate = useNavigate();
+
   return (
-    <button className="bg-gradient-to-r w-full from-green-primary h-12 rounded-full p-1 to-[#77EDB4] ">
+    <button
+      onClick={() => navigate(item?.href)}
+      className={clsx(
+        "bg-gradient-to-r w-full from-green-primary transition-all cursor-pointer h-12 rounded-full p-[3px] to-[#77EDB4] ",
+        !item?.isActive && "!from-transparent !to-transparent",
+        !item?.isActive && "hover:bg-[#212325]"
+      )}
+    >
       <div
         className={clsx(
-          "w-full flex items-center bg-white rounded-full h-full",
+          "w-full flex items-center gap-x-2 bg-white px-1 rounded-full h-full",
           !item?.isActive && "!bg-transparent"
         )}
       >
@@ -23,7 +33,7 @@ export function SidebarItem({ item }: { item: SidebarItemProps }) {
         <span
           className={clsx(
             "text-sm font-medium text-white",
-            item?.isActive && "font-semibold text-bg-primary"
+            item?.isActive && "!font-semibold !text-bg-primary"
           )}
         >
           {item?.label}

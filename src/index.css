@@ -4,19 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-bg-primary: #0D0D0D;
+  --color-bg-primary: #0d0d0d;
   --color-bg-secondary: #151718;
-  --color-card-primary: #212325
+  --color-bg-gray-shade: #212325;
 
-  --color-neutral-primary: #E1E1E1;
-  --color-neutral-secondary: #A1A1A1;
+  --color-neutral-primary: #e1e1e1;
+  --color-neutral-secondary: #a1a1a1;
   --color-neutral-shade-300: #909093;
 
-  --color-green-primary: #77ED91;
+  --color-green-primary: #77ed91;
   --manrope-font: "Manrope", sans-serif;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   outline: none;
 }
 
@@ -139,4 +141,28 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::-webkit-scrollbar {
+  width: 124px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #212325;
+  border-radius: 9999px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+* {
+  scrollbar-width: 124px;
+  scrollbar-color: #212325 transparent; 
 }

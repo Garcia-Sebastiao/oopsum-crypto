@@ -6,34 +6,41 @@ import { useDashboardTranslations } from "@/locales/hooks/use-dashboard-translat
 import { Eye, LayoutDashboard } from "lucide-react";
 
 export function useSidebarItems() {
+  const pathname = window.location.pathname;
   const { translate } = useDashboardTranslations();
   const sidebarItems = [
     {
+      isActive: pathname.includes("/dashboard"),
       icon: LayoutDashboard,
       href: "/dashboard",
       label: translate("dashboard.sidebar.dashboard"),
     },
     {
+      isActive: pathname.includes("/dashboard/portfolio"),
       icon: PortfolioIcon,
       href: "/dashboard/portfolio",
       label: translate("dashboard.sidebar.portfolio"),
     },
     {
+      isActive: pathname.includes("/dashboard/trading"),
       icon: TradingIcon,
       href: "/dashboard/trading",
       label: translate("dashboard.sidebar.trading"),
     },
     {
+      isActive: pathname.includes("/dashboard/watchlist"),
       icon: Eye,
       href: "/dashboard/watchlist",
       label: translate("dashboard.sidebar.watchlist"),
     },
     {
+      isActive: pathname.includes("/dashboard/academy"),
       icon: OpenBookIcon,
       href: "/dashboard/academy",
       label: translate("dashboard.sidebar.academy"),
     },
     {
+      isActive: pathname.includes("/dashboard/wallet"),
       icon: WalletIcon,
       href: "/dashboard/wallet",
       label: translate("dashboard.sidebar.wallet"),

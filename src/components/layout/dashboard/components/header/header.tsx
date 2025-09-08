@@ -13,9 +13,12 @@ export function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full flex items-center justify-between h-[60px]">
-      <div className="space-y-2">
+    <header className="w-full sticky px-[30px] py-6 bg-bg-primary top-0 flex items-center justify-between">
+      <div className="space-y-1">
         <h4 className="text-3xl text-white">{translate("dashboard.title")}</h4>
+        <span className="text-xs italic text-[#909093]">
+          {translate("dashboard.updated-on", { date: "12 Aug, 2023" })}
+        </span>
       </div>
 
       <div className="flex items-center gap-x-5">
@@ -52,6 +55,7 @@ export function Header() {
           >
             {userOptions?.map((option) => (
               <Button
+                key={option?.id}
                 onClick={() => navigate(option.href)}
                 className="flex w-full items-center justify-start gap-x-2"
               >
