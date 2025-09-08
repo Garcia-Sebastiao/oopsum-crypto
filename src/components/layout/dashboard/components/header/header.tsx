@@ -1,10 +1,16 @@
 import { Avatar } from "@/components/shared/avatar";
+import { Button } from "@/components/shared/button/button";
+import { CustomDropdown } from "@/components/shared/dropdown";
 import { Input } from "@/components/ui/input";
 import { useDashboardTranslations } from "@/locales/hooks/use-dashboard-translations";
-import { BellDot, Search } from "lucide-react";
+import { BellDot, ChevronDown, Search } from "lucide-react";
+import { useUserOptions } from "./hooks/use-user-options";
+import { useNavigate } from "react-router-dom";
 
 export function Header() {
   const { translate } = useDashboardTranslations();
+  const { userOptions } = useUserOptions();
+  const navigate = useNavigate();
 
   return (
     <header className="w-full flex items-center justify-between h-[60px]">
@@ -29,10 +35,31 @@ export function Header() {
             <BellDot className="w-6 h-6 text-white" />
           </div>
 
-          <Avatar
-            src="https://github.com/shadcn.png"
-            className="w-[3.125rem] h-[3.125rem]"
-          />
+          <CustomDropdown
+            trigger={
+              <div className="flex items-center gap-x-2">
+                <Avatar
+                  src="https://github.com/shadcn.png"
+                  className="w-[3.125rem] h-[3.125rem]"
+                />
+
+                <span className="text-sm text-white font-medium">
+                  Garcia Pedro
+                </span>
+                <ChevronDown className="w-4 h-4 text-white" />
+              </div>
+            }
+          >
+            {userOptions?.map((option) => (
+              <Button
+                onClick={() => navigate(option.href)}
+                className="flex w-full items-center justify-start gap-x-2"
+              >
+                {<option.icon className="w-4 h-4 text-white" />}
+                <span>{option?.label}</span>
+              </Button>
+            ))}
+          </CustomDropdown>
         </div>
       </div>
     </header>

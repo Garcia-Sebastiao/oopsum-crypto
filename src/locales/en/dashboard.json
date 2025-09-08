@@ -2,6 +2,21 @@
   "dashboard": {
     "title": "Dashboard",
     "updated": "Updated on {{date}}",
-    "search": "Search your coins..."
+    "search": "Search your coins...",
+
+    "user-options": {
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "portfolio": "Portfolio",
+      "trading": "Trading",
+      "watchlist": "Watchlist",
+      "academy": "Academy",
+      "wallet": "Wallet"
+    }
   }
 }

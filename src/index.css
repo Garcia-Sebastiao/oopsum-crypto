@@ -16,6 +16,10 @@
   --manrope-font: "Manrope", sans-serif;
 }
 
+button, input, textarea {
+  outline: none;
+}
+
 body {
   font-family: var(--manrope-font);
   color: white;

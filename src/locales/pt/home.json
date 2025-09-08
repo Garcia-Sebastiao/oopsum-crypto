@@ -1,6 +1,12 @@
 {
   "home": {
     "title": "Bem-vindo ao Oopsum Crypto",
-    "description": "Sua plataforma confiável para todas as coisas criptográficas."
+    "description": "Sua plataforma confiável para todas as coisas criptográficas.",
+
+    "user-options": {
+      "profile": "Perfil",
+      "settings": "Configurações",
+      "logout": "Sair"
+    }
   }
 }
