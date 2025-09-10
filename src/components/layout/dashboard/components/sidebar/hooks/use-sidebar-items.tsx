@@ -7,6 +7,7 @@ import { Eye, LayoutDashboard } from "lucide-react";
 
 export function useSidebarItems() {
   const pathname = window.location.pathname;
+
   const { translate } = useDashboardTranslations();
   const sidebarItems = [
     {
@@ -16,31 +17,31 @@ export function useSidebarItems() {
       label: translate("dashboard.sidebar.dashboard"),
     },
     {
-      isActive: pathname.includes("/dashboard/portfolio"),
+      isActive: pathname.includes("/portfolio"),
       icon: PortfolioIcon,
       href: "/portfolio",
       label: translate("dashboard.sidebar.portfolio"),
     },
     {
-      isActive: pathname.includes("/dashboard/trading"),
+      isActive: pathname.includes("/trading"),
       icon: TradingIcon,
       href: "/trading",
       label: translate("dashboard.sidebar.trading"),
     },
     {
-      isActive: pathname.includes("/dashboard/watchlist"),
+      isActive: pathname.includes("/watchlist"),
       icon: Eye,
       href: "/watchlist",
       label: translate("dashboard.sidebar.watchlist"),
     },
     {
-      isActive: pathname.includes("/dashboard/academy"),
+      isActive: pathname.includes("/academy"),
       icon: OpenBookIcon,
       href: "/academy",
       label: translate("dashboard.sidebar.academy"),
     },
     {
-      isActive: pathname.includes("/dashboard/wallet"),
+      isActive: pathname.includes("/wallet"),
       icon: WalletIcon,
       href: "/wallet",
       label: translate("dashboard.sidebar.wallet"),

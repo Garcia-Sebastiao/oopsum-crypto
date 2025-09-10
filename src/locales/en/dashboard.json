@@ -4,6 +4,11 @@
     "updated": "Updated on {{date}}",
     "search": "Search your coins...",
 
+    "header-titles": {
+      "dashboard": "Dashboard",
+      "portfolio": "Portfolio"
+    },
+
     "not-found": {
       "label": "Ops! Page not found",
       "button": "Go back to home"

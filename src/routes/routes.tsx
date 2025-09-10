@@ -7,6 +7,7 @@ import { PrivateRoutes } from "./private-routes";
 import { PublicRoutes } from "./public-routes";
 import { SignInPage } from "../pages/auth/sign-in";
 import { DashboardLayout } from "@/components/layout/dashboard/dashboard-layout";
+import { PortfolioPage } from "@/pages/portfolio";
 
 export const routes: RouteObject[] = [
   {
@@ -18,6 +19,10 @@ export const routes: RouteObject[] = [
           {
             element: <DashboardLayout />,
             children: [{ path: "/dashboard", element: <HomePage /> }],
+          },
+          {
+            element: <DashboardLayout />,
+            children: [{ path: "/portfolio", element: <PortfolioPage /> }],
           },
         ],
       },

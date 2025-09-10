@@ -6,18 +6,21 @@ import { useDashboardTranslations } from "@/locales/hooks/use-dashboard-translat
 import { BellDot, ChevronDown, Search } from "lucide-react";
 import { useUserOptions } from "./hooks/use-user-options";
 import { useNavigate } from "react-router-dom";
+import { formatDate } from "@/utils/date/format-date";
+import { useGetHeaderTitle } from "./hooks/use-get-header-title";
 
 export function Header() {
   const { translate } = useDashboardTranslations();
   const { userOptions } = useUserOptions();
   const navigate = useNavigate();
+  const { title } = useGetHeaderTitle();
 
   return (
     <header className="w-full z-40 sticky px-[30px] py-6 bg-bg-primary top-0 flex items-center justify-between">
       <div className="space-y-1">
-        <h4 className="text-3xl text-white">{translate("dashboard.title")}</h4>
+        <h4 className="text-3xl text-white">{title}</h4>
         <span className="text-xs italic text-[#909093]">
-          {translate("dashboard.updated-on", { date: "12 Aug, 2023" })}
+          {translate("dashboard.updated-on", { date: formatDate(new Date()) })}
         </span>
       </div>
 
@@ -34,11 +37,12 @@ export function Header() {
         </div>
 
         <div className="space-x-[10px] flex">
-          <div className="w-[3.125rem] h-[3.125rem] rounded-full bg-[#212325] flex items-center justify-center">
+          <button className="cursor-pointer hover:brightness-75 w-[3.125rem] h-[3.125rem] rounded-full bg-[#212325] flex items-center justify-center">
             <BellDot className="w-6 h-6 text-white" />
-          </div>
+          </button>
 
           <CustomDropdown
+            className="shadow-lg"
             trigger={
               <div className="flex items-center gap-x-2">
                 <Avatar
@@ -57,7 +61,7 @@ export function Header() {
               <Button
                 key={option?.id}
                 onClick={() => navigate(option.href)}
-                className="flex w-full items-center justify-start gap-x-2"
+                className="flex w-full text-white !bg-transparent hover:!bg-bg-secondary items-center justify-start gap-x-2"
               >
                 {<option.icon className="w-4 h-4 text-white" />}
                 <span>{option?.label}</span>

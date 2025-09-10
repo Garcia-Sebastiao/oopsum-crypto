@@ -23,7 +23,7 @@ export function CustomDropdown({
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className={clsx("min-w-64 flex flex-col rounded-xl shadow-lg mt-3 bg-[#151718] border-none p-2", className)}
+        className={clsx("min-w-64 flex flex-col rounded-xl shadow-lg mt-3 bg-bg-gray-shade border-none p-2", className)}
       >
         {children}
       </DropdownMenuContent>
