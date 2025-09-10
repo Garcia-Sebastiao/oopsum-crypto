@@ -4,6 +4,11 @@
     "updated": "Updated on {{date}}",
     "search": "Search your coins...",
 
+    "not-found": {
+      "label": "Ops! Page not found",
+      "button": "Go back to home"
+    },
+
     "updated-on": "Updated on {{date}}",
 
     "see-all": "See all",
@@ -47,6 +52,8 @@
         "stop-limit": "Stop limit"
       },
 
+      "limit-price": "Limit price",
+      "amount": "Amount",
       "total": "Total",
       "buy-now": "Buy now"
     },

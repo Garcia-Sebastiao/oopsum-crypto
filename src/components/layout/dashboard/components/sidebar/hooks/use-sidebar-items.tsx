@@ -18,31 +18,31 @@ export function useSidebarItems() {
     {
       isActive: pathname.includes("/dashboard/portfolio"),
       icon: PortfolioIcon,
-      href: "/dashboard/portfolio",
+      href: "/portfolio",
       label: translate("dashboard.sidebar.portfolio"),
     },
     {
       isActive: pathname.includes("/dashboard/trading"),
       icon: TradingIcon,
-      href: "/dashboard/trading",
+      href: "/trading",
       label: translate("dashboard.sidebar.trading"),
     },
     {
       isActive: pathname.includes("/dashboard/watchlist"),
       icon: Eye,
-      href: "/dashboard/watchlist",
+      href: "/watchlist",
       label: translate("dashboard.sidebar.watchlist"),
     },
     {
       isActive: pathname.includes("/dashboard/academy"),
       icon: OpenBookIcon,
-      href: "/dashboard/academy",
+      href: "/academy",
       label: translate("dashboard.sidebar.academy"),
     },
     {
       isActive: pathname.includes("/dashboard/wallet"),
       icon: WalletIcon,
-      href: "/dashboard/wallet",
+      href: "/wallet",
       label: translate("dashboard.sidebar.wallet"),
     },
   ];

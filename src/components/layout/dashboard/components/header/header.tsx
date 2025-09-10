@@ -13,7 +13,7 @@ export function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full sticky px-[30px] py-6 bg-bg-primary top-0 flex items-center justify-between">
+    <header className="w-full z-40 sticky px-[30px] py-6 bg-bg-primary top-0 flex items-center justify-between">
       <div className="space-y-1">
         <h4 className="text-3xl text-white">{translate("dashboard.title")}</h4>
         <span className="text-xs italic text-[#909093]">
