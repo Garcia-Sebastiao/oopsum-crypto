@@ -4,11 +4,24 @@ import { RecentlyAddedCard } from "./components/recently-added-card/recently-add
 import { TopCoins } from "./components/top-coins/top-coins";
 import { QuickTrade } from "./components/quick-trade/quick-trade";
 import { HistoryCard } from "./components/history-card/history-card";
+import { motion } from "framer-motion";
 
 export function HomePage() {
   const { translate } = useDashboardTranslations();
   return (
-    <div className="w-full flex-1">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.05,
+        duration: 1.3,
+      }}
+      className="w-full flex-1"
+    >
       <span className="text-sm italic text-neutral-secondary">
         {translate("dashboard.span")}
       </span>
@@ -24,6 +37,6 @@ export function HomePage() {
         <QuickTrade />
         <HistoryCard />
       </div>
-    </div>
+    </motion.div>
   );
 }
