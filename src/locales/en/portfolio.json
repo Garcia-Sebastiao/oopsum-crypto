@@ -1,5 +1,41 @@
 {
   "portfolio": {
-    "title": "Portfolio"
+    "title": "Portfolio",
+
+    "current-balance": {
+      "label": "Current balance",
+
+      "stats": {
+        "all-time-profit": "All time profit",
+        "best-performer": "Best performer",
+        "worst-performer": "Worst performer"
+      },
+
+      "filter": {
+        "chart": "Chart",
+        "allocation": "Allocation",
+        "statistics": "Statistics"
+      },
+      "options": {
+        "edit": "Edit",
+        "add-transactions": "Add transaction"
+      }
+    },
+
+    "your-holdings": {
+      "title": "Your holdings",
+
+      "table": {
+        "thead": {
+          "assets": "Assets",
+          "price": "Price",
+          "24h": "24H",
+          "balance": "Balance",
+          "avg-buy": "Avg buy",
+          "profit-loss": "Profit/Loss",
+          "actions": "Actions"
+        }
+      }
+    }
   }
 }
