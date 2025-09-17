@@ -7,6 +7,7 @@ import enSignIn from "./locales/en/sign-in.json";
 import ptSignIn from "./locales/pt/sign-in.json";
 import dashboard from "./locales/en/dashboard.json";
 import portfolio from "./locales/en/portfolio.json";
+import watchlist from "./locales/en/watchlist.json";
 
 i18n
   .use(LanguageDetector)
@@ -18,6 +19,7 @@ i18n
     },
     resources: {
       en: {
+        watchlist: watchlist,
         dashboard: dashboard,
         portfolio: portfolio,
         "sign-in": enSignIn,

@@ -6,7 +6,8 @@
 
     "header-titles": {
       "dashboard": "Dashboard",
-      "portfolio": "Portfolio"
+      "portfolio": "Portfolio",
+      "watchlist": "Watchlist"
     },
 
     "not-found": {
