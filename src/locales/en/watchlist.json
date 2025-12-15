@@ -1,0 +1,28 @@
+{
+  "watchlist": {
+    "title": "Watchlist",
+
+    "my-coins": {
+      "label": "My coins list",
+      "span": "Primary",
+
+      "options": {
+        "edit": "Edit",
+        "new-watchlist": "New Watchlist"
+      },
+
+      "table": {
+        "thead": {
+          "name": "Name",
+          "price": "Price",
+          "24h": "24H",
+          "7d": "7D",
+          "market-cap": "Market Cap",
+          "volume": "Volume",
+          "last-seven-days": "Last 7 Days",
+          "actions": "Actions"
+        }
+      }
+    }
+  }
+}

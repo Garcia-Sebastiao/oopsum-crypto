@@ -8,6 +8,7 @@ import { PublicRoutes } from "./public-routes";
 import { SignInPage } from "../pages/auth/sign-in";
 import { DashboardLayout } from "@/components/layout/dashboard/dashboard-layout";
 import { PortfolioPage } from "@/pages/portfolio";
+import { WatchlistPage } from "@/pages/watchlist";
 
 export const routes: RouteObject[] = [
   {
@@ -29,6 +30,10 @@ export const routes: RouteObject[] = [
           {
             element: <DashboardLayout />,
             children: [{ path: "/portfolio", element: <PortfolioPage /> }],
+          },
+          {
+            element: <DashboardLayout />,
+            children: [{ path: "/watchlist", element: <WatchlistPage /> }],
           },
         ],
       },
