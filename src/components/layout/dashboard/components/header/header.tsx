@@ -5,14 +5,12 @@ import { Input } from "@/components/ui/input";
 import { useDashboardTranslations } from "@/locales/hooks/use-dashboard-translations";
 import { BellDot, ChevronDown, Search } from "lucide-react";
 import { useUserOptions } from "./hooks/use-user-options";
-import { useNavigate } from "react-router-dom";
 import { formatDate } from "@/utils/date/format-date";
 import { useGetHeaderTitle } from "./hooks/use-get-header-title";
 
 export function Header() {
   const { translate } = useDashboardTranslations();
   const { userOptions } = useUserOptions();
-  const navigate = useNavigate();
   const { title } = useGetHeaderTitle();
 
   return (
@@ -60,7 +58,7 @@ export function Header() {
             {userOptions?.map((option) => (
               <Button
                 key={option?.id}
-                onClick={() => navigate(option.href)}
+                onClick={option?.onclick}
                 className="flex w-full text-white !bg-transparent hover:!bg-bg-secondary items-center justify-start gap-x-2"
               >
                 {<option.icon className="w-4 h-4 text-white" />}

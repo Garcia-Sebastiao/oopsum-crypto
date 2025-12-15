@@ -53,7 +53,7 @@ export function SignInForm() {
       </div>
 
       <Button
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/dashboard")}
         className="w-full cursor-pointer h-12  bg-[#4ace66] hover:bg-[#4ace66] hover:brightness-75 text-white font-medium rounded-xl"
       >
         {translate("sign-in.form.sign-in-button")}

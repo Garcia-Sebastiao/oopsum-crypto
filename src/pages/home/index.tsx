@@ -5,9 +5,15 @@ import { TopCoins } from "./components/top-coins/top-coins";
 import { QuickTrade } from "./components/quick-trade/quick-trade";
 import { HistoryCard } from "./components/history-card/history-card";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export function HomePage() {
   const { translate } = useDashboardTranslations();
+
+  useEffect(() => {
+    localStorage.setItem("user-token", "mock-token");
+  }, []);
+
   return (
     <motion.div
       initial={{
